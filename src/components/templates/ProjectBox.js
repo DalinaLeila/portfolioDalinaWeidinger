@@ -1,6 +1,5 @@
 import React from "react"
 
-import { Container } from "../../styles/generalStyles"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import Img from "gatsby-image"

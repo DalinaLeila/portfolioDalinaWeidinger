@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container } from "../../styles/generalStyles"
+import { Container } from "../../styles/MainStyles"
 import styled from "styled-components"
 import Projects from "./Projects"
 

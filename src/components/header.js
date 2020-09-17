@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useRef, useEffect } from "react"
-import { Navbar } from "../styles/generalStyles"
+import { Navbar } from "../styles/MainStyles"
 
 const Header = ({ siteTitle }) => {
   const [navBackground, setNavBackground] = useState(false)

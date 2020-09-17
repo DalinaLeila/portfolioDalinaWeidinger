@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { ContentWrapper } from "../styles/Wrapper"
 import { motion } from "framer-motion"
 import back from "../images/back.svg"
-import { Container, Navbar } from "../styles/generalStyles"
+import { Container, Navbar } from "../styles/MainStyles"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

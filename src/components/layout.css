@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
-
 :root {
   /* --beige: rgb(169, 121, 135); */
 
@@ -33,6 +31,8 @@ body {
   padding: 0;
   /* background: rgba(233, 240, 243, 0.5); */
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
 
 button :hover {
   cursor: pointer;

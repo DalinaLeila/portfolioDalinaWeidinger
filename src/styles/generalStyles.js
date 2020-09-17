@@ -81,4 +81,4 @@ const Landing = styled.div`
   }
 `
 
-export default { Landing, Navabr, Container }
+export default { Landing, Navbar, Container }

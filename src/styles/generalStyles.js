@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Container = styled.div`
+export const Container = styled.div`
   /* // min-height: 70vh; */
   padding: 50px 0;
   padding-top: 0;
@@ -16,7 +16,7 @@ const Container = styled.div`
   }
 `
 
-const Navbar = styled.header`
+export const Navbar = styled.header`
   display: flex;
   position: fixed;
   z-index: 10;
@@ -63,7 +63,7 @@ const Navbar = styled.header`
   }
 `
 
-const Landing = styled.div`
+export const Landing = styled.div`
   height: 82vh;
   display: flex;
   justify-content: center;
@@ -80,5 +80,3 @@ const Landing = styled.div`
     }
   }
 `
-
-export default { Landing, Navbar, Container }

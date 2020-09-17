@@ -31,14 +31,11 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          // maxWidth: "92vw",
-          // marginTop: "9vh",
-          // padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        {/* <AnimatePresence exitBeforeEnter> */}
-        <main>{children}</main>
-        {/* </AnimatePresence> */}
+        <AnimatePresence exitBeforeEnter>
+          <main>{children}</main>
+        </AnimatePresence>
       </div>
     </>
   )

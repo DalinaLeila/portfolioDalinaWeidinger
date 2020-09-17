@@ -39,6 +39,33 @@ const Skills = () => {
             src={code}
             alt="https://www.flaticon.com/authors/icongeek26"
           />
+          <h1>Coding School</h1>
+          <p>
+            I value simple content structure, clean design patterns, and
+            thoughtful interactions.
+          </p>
+
+          <p className="sub-title">Languages I know:</p>
+          <ul>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React/Redux/JSX</li>
+            <li>GatsbyJs</li>
+            <li>NextJs</li>
+            <li>MongoDB</li>
+            <li>Express</li>
+            <li>Node</li>
+            <li>git/GitHub</li>
+          </ul>
+        </div>
+
+        <div className="box" onMouseOver={() => setDirection(false)}>
+          <img
+            className="icon"
+            src={code}
+            alt="https://www.flaticon.com/authors/icongeek26"
+          />
           <h1>Full-stack Developer</h1>
           <p>
             I value simple content structure, clean design patterns, and
@@ -59,27 +86,6 @@ const Skills = () => {
             <li>git/GitHub</li>
           </ul>
         </div>
-        {/*      <div>
-        <img className="icon" src={code} alt="" />
-        <h1>Web-dev Instructor</h1>
-        <p>
-          I value simple content structure, clean design patterns, and
-          thoughtful interactions.
-        </p>
-        <p className="sub-title">Languages I know:</p>
-        <ul>
-          <li>Javascript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>React/Redux/JSX</li>
-          <li>GatsbyJs</li>
-          <li>NextJs</li>
-          <li>MongoDB</li>
-          <li>Express</li>
-          <li>Node</li>
-          <li>git/GitHub</li>
-        </ul>{" "}
-      </div> */}
       </SkillsStyles>
     </div>
   )
@@ -96,7 +102,7 @@ const SkillsStyles = styled.div`
   margin: 0 auto;
   color: var(--darkBlue);
   margin-top: -19rem;
-  height: 70vh;
+  height: 80vh;
   margin-bottom: 120px;
   /* background: var(--blue); */
 
@@ -135,7 +141,7 @@ const SkillsStyles = styled.div`
       0 0 0 1px var(--borderColor);
     background-color: white;
     text-align: center;
-    width: 45%;
+    width: 30%;
     height: 100%;
     font-weight: 300;
 

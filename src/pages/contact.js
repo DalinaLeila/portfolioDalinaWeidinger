@@ -305,12 +305,12 @@ const Landing = styled.div`
     }
     .headline {
       margin-bottom: 56px;
-      font-size: 4rem;
+      font-size: 3rem;
       text-align: left;
       font-weight: 200;
 
       span {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 700;
         color: var(--blue);
       }
@@ -348,7 +348,7 @@ const Landing = styled.div`
 
       .input-header {
         margin-bottom: 4px;
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       .form-input {
@@ -391,7 +391,7 @@ const Landing = styled.div`
       color: var(--blue);
       border-radius: 12px;
       padding: 1rem 3rem;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
 
       :hover {
         background: var(--blue);

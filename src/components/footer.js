@@ -110,7 +110,7 @@ const ContactBanner = styled.div`
   border-radius: 12px;
   z-index: 10;
   margin-bottom: 10rem;
-  margin: -6rem 30rem;
+  margin: -6rem 20rem;
 
   @media (min-width: 1024px) and (max-width: 1440px) {
   }

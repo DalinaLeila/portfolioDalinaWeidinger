@@ -28,14 +28,14 @@ const AboutSection = styled.div`
   align-items: center;
   text-align: center;
   color: var(--white);
-  height: 60vh;
+  height: 70vh;
   max-width: 960px;
   margin-top: 60px;
 
   p {
     font-weight: 300;
     line-height: 2;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .circle {
     background: var(--darkBlue);

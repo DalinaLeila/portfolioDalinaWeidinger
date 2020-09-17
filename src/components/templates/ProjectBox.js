@@ -48,7 +48,7 @@ const ProjectStyled = styled.div`
   cursor: pointer;
   /* padding-bottom: 83%; */
   width: 100%;
-  height: 250px;
+  height: 220px;
   box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.18);
   position: relative;
   background-size: contain;

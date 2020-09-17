@@ -29,8 +29,8 @@ const Header = ({ siteTitle }) => {
       <div className="container">
         <Link to="/#home">{siteTitle}</Link>
         <div>
-          <Link className=" about-link " to="/#about">
-            About Me
+          <Link className=" about-link " to="/#projects">
+            Projects
           </Link>
           <Link className="circle" to="/contact" bg="var(--beige)">
             Get In Touch

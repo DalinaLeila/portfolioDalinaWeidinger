@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container } from "../../styles/generalStyles"
 import styled from "styled-components"
-import landingImg from "../../images/landingImg.jpg"
 
 const About = () => (
   <Container flex alignCenter column bg={"var(--blue)"} id="about">
@@ -39,13 +38,6 @@ const AboutSection = styled.div`
     font-size: 1.2rem;
   }
   .circle {
-    /*    color: var(--white);
-    background: var(--darkBlue);
-    border-radius: 25px;
-    border: 2px solid var(--blue);
-    font-weight: 600;
-    padding: 0.7rem 1.5rem;
-    text-decoration: none; */
     background: var(--darkBlue);
     color: var(--white);
     border-radius: 25px;

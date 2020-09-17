@@ -1,8 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useRef, useEffect } from "react"
-import styled from "styled-components"
-import { Example } from "../components/NavBar/Example"
 import { Navbar } from "../styles/generalStyles"
 
 const Header = ({ siteTitle }) => {
@@ -21,23 +19,7 @@ const Header = ({ siteTitle }) => {
       document.removeEventListener("scroll", handleScroll)
     }
   }, [])
-  /* const colors = [
-    "#FF008C",
-    "#D309E1",
-    "#9C1AFF",
-    "#7700FF",
-    "#4400FF",
-    "#FF008C",
-    "#D309E1",
-    "#9C1AFF",
-    "#7700FF",
-    "#4400FF",
-    "#FF008C",
-    "#D309E1",
-    "#9C1AFF",
-    "#7700FF",
-    "#4400FF",
-  ] */
+
   return (
     <Navbar
       color={navBackground ? "var(--white)" : "var(--darkBlue)"}
@@ -55,7 +37,6 @@ const Header = ({ siteTitle }) => {
           </Link>
         </div>
       </div>
-      {/* <Example /> */}
     </Navbar>
   )
 }

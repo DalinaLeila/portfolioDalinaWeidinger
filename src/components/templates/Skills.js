@@ -2,8 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import code from "../../images/code.svg"
 import student from "../../images/student.svg"
-import pointer from "../../images/pointer.png"
-import Image from "gatsby-image"
 
 const Skills = () => {
   const [direction, setDirection] = useState(true)

@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+:root {
+  /* --beige: rgb(169, 121, 135); */
+
+  --black: #2f343a;
+  --whiteText: white;
+  --white: white;
+  --lightGrey: rgba(233, 240, 243, 0.5);
+  --grey: #717d8c;
+  --lightGrey: #dddddd;
+  --beige: #bdb69c;
+  --green: #80ceb9;
+  --blue: #41aac4;
+  --pink: #ff008c;
+  --purple: #d309e1;
+  --darkPurple: #9c1aff;
+  --darkBlue: rgb(24, 41, 61);
+  --borderColor: rgba(24, 41, 61, 0.1);
+  /* --beige: rgb(64, 126, 145); */
+  /* --grey: #d9d9d9; */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background: rgba(233, 240, 243, 0.5); */
+}
+
+button :hover {
+  cursor: pointer;
+}
+button :focus {
+  outline: none;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.spaceBtw {
+  justify-content: space-between;
+}

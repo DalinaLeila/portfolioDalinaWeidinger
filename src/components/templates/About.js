@@ -1,23 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Container } from "../../styles/MainStyles"
 import styled from "styled-components"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
+const About = () => {
+  const { scrollY, scrollYProgress } = useViewportScroll()
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.9], [0, 1, 0])
 
-const About = () => (
-  <Container flex alignCenter column bg={"var(--blue)"} id="about">
-    <AboutSection>
-      <h1 className="section-title">Hi, I'm Dalina. Nice to meet you.</h1>
-      <p>
-        Dynamic and motivated professional with an interdisciplinary interest in
-        computer science and psychology. Skills include hands-on experience of
-        debugging and optimizing code, analytical thinking and teaching full
-        stack technologies. Experienced in applying customer concepts to IT to
-        improve user experience for clients and employees.
-      </p>
-      <a className="circle">Download Resume</a>
-    </AboutSection>
-  </Container>
-)
+  return (
+    <Container flex alignCenter column bg={"var(--blue)"} id="about">
+      <motion.div style={{ opacity }}>
+        <AboutSection>
+          <h1 className="section-title">Hi, I'm Dalina. Nice to meet you.</h1>
+          <p>
+            Dynamic and motivated professional with an interdisciplinary
+            interest in computer science and psychology. Skills include hands-on
+            experience of debugging and optimizing code, analytical thinking and
+            teaching full stack technologies. Experienced in applying customer
+            concepts to IT to improve user experience for clients and employees.
+          </p>
+          <a className="circle">Download Resume</a>
+        </AboutSection>
+      </motion.div>
+    </Container>
+  )
+}
 
 export default About
 

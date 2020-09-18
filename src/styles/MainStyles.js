@@ -29,6 +29,13 @@ export const Navbar = styled.header`
     margin: 0 5rem;
 
     width: 100%;
+
+    .desktop-logo {
+      /*  color: var(--darkBlue);
+      span {
+        color: var(--green) !important;
+      } */
+    }
     .phone-logo {
       display: none;
     }

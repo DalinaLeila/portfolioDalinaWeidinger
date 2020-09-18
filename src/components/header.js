@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => {
     >
       <div className="container">
         <Link className="logo desktop-logo" to="/">
-          Dalina Weidinger
+          Dalina <span>Weidinger</span>
         </Link>
         <Link className="phone-logo logo" to="/">
           DW

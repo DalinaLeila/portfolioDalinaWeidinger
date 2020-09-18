@@ -28,5 +28,5 @@ const ProjectPageSection = styled.section`
   flex-direction: column;
   color: var(--darkBlue);
   border-top: 1px solid var(--borderColor);
-  padding-top: 2rem;
+  padding-top: 6rem;
 `

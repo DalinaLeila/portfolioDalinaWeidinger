@@ -6,7 +6,8 @@ import SEO from "../components/seo"
 import { Link } from "gatsby"
 import ProjectLanding from "../components/templates/ProjectLanding"
 import About from "../components/templates/About"
-import { motion } from "framer-motion"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
+
 import Footer from "../components/footer"
 import Testimonials from "../components/templates/Testimonials"
 import { Landing } from "../styles/MainStyles"
@@ -24,6 +25,13 @@ import ParticlesLanding from "../components/ParticlesLanding"
 ` */
 
 const IndexPage = () => {
+  const { scrollY, scrollYProgress } = useViewportScroll()
+  // useTransform(motionValue, from, to);
+  const yPosAnim = useTransform(scrollYProgress, [0, 0.2], [0, -250])
+  const yPosAnimLastName = useTransform(scrollYProgress, [0, 0.1], [0, -250])
+
+  const scale = useTransform(scrollYProgress, [1, 0], [0.6, 1])
+  const scaleP = useTransform(scrollYProgress, [1, 0], [0.6, 1])
   return (
     <motion.div
       exit={{ opacity: 0 }}
@@ -35,9 +43,9 @@ const IndexPage = () => {
         {/* <ParticlesLanding /> */}
         <Landing>
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
+          /*     initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
-            transition={{ duration: 2, ease: "easeIn" }}
+            transition={{ duration: 2, ease: "easeIn" }} */
           >
             <div
               style={{
@@ -50,13 +58,42 @@ const IndexPage = () => {
               }}
             >
               <div className="title-container">
-                <motion.h1 className="title-landing">Weidinger</motion.h1>
-                <motion.h1 className="title-landing-two">Dalina</motion.h1>
+                <motion.h1
+                  style={{ scale, y: yPosAnimLastName }}
+                  initial={{ opacity: 0, y: 200 }}
+                  animate={{
+                    opacity: 1,
+
+                    y: 0,
+                    transition: { duration: 0.6 },
+                  }}
+                  transition={{ duration: 2, ease: "easeIn" }}
+                  className="title-landing"
+                >
+                  Weidinger
+                </motion.h1>
+                <motion.h1
+                  style={{ scale, y: yPosAnim }}
+                  initial={{ opacity: 0, y: 80 }}
+                  animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
+                  transition={{ duration: 3, ease: "easeIn" }}
+                  className="title-landing-two"
+                >
+                  Dalina
+                </motion.h1>
               </div>
               <motion.p
                 style={{
                   margin: "0",
-                  fontSize: "1.3rem",
+                  // fontSize: "1.3rem",
+                  scaleP,
+                }}
+                initial={{ opacity: 0, y: 200 }}
+                animate={{
+                  opacity: 1,
+
+                  y: 0,
+                  transition: { duration: 0.6 },
                 }}
               >
                 I am a freelance web developer, and I love what I do.

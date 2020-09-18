@@ -33,7 +33,7 @@ const footer = () => {
         {/*   <div className="icon"></div>
         <div className="icon"></div> */}
       </div>{" "}
-      <p>
+      <p className="logo">
         {/* © {new Date().getFullYear()} */}
         Dalina Weidinger
       </p>

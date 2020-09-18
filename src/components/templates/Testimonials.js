@@ -51,7 +51,8 @@ const Container = styled.section`
   padding-top: 2rem;
   color: var(--darkBlue);
   border-top: 1px solid var(--borderColor);
-  background: var(--whiteText);
+  /* background: transparent; */
+
   @media (min-width: 1024px) {
     padding: 2rem 15rem 10rem;
   }
@@ -64,8 +65,8 @@ const Container = styled.section`
 const References = styled.div`
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px var(--borderColor);
-
+  /* box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px var(--borderColor);
+ */
   p {
     color: var(--blue);
   }

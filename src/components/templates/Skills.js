@@ -2,13 +2,15 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import code from "../../images/code.svg"
 import student from "../../images/student.svg"
-
+import { motion, useViewportScroll, useTransform } from "framer-motion"
 const Skills = () => {
-  const [direction, setDirection] = useState(true)
+  const { scrollY, scrollYProgress } = useViewportScroll()
+  // useTransform(motionValue, from, to);
+  const scale = useTransform(scrollYProgress, [0, 0.3], [0.6, 1])
   return (
     <div>
       <SkillsStyles>
-        <div className="box" onMouseOver={() => setDirection(true)}>
+        <motion.div style={{ scale }} className="box">
           <img
             className="icon"
             src={student}
@@ -29,11 +31,9 @@ const Skills = () => {
             <li>Organizational Psychology</li>
             <li>Marketing</li>
           </ul>
-        </div>
-        {/*  <div className="box middle">
-          <img className={direction ? "reverse" : ""} src={pointer} alt="" />
-        </div> */}
-        <div className="box" onMouseOver={() => setDirection(false)}>
+        </motion.div>
+
+        <motion.div style={{ scale }} className="box">
           <img
             className="icon"
             src={code}
@@ -58,9 +58,9 @@ const Skills = () => {
             <li>Node</li>
             <li>git/GitHub</li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="box" onMouseOver={() => setDirection(false)}>
+        <motion.div style={{ scale }} className="box">
           <img
             className="icon"
             src={code}
@@ -85,7 +85,7 @@ const Skills = () => {
             <li>Node</li>
             <li>git/GitHub</li>
           </ul>
-        </div>
+        </motion.div>
       </SkillsStyles>
     </div>
   )
@@ -102,6 +102,7 @@ const SkillsStyles = styled.div`
   margin: 0 auto;
   color: var(--darkBlue);
   margin-top: -19rem;
+
   height: 80vh;
   margin-bottom: 120px;
   /* background: var(--blue); */
@@ -157,7 +158,7 @@ const SkillsStyles = styled.div`
     .sub-title {
       margin-top: 50px;
       color: var(--blue);
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 

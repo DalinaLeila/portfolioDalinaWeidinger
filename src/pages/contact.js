@@ -66,7 +66,7 @@ const Contact = ({ data }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <Navbar border backgroundColor="var(--darkBlue)" color="var(--whites)">
+        <Navbar border backgroundColor="var(--green)" color="var(--white)">
           <div className="container">
             <Link to="/">
               <img height="30px" src={back} alt="" />
@@ -98,7 +98,7 @@ const Contact = ({ data }) => {
                 {/* <p className="sections title">Contact</p> */}
                 <h1 className="headline">
                   Thanks for taking the time to reach out.
-                  <br /> <span>Let's work together!</span>
+                  <br /> <span className="logo">Let's work together!</span>
                 </h1>
                 <div className="contact-info-container">
                   <div className=" body contact-info">
@@ -292,8 +292,8 @@ const Landing = styled.div`
     }
   }
   min-height: 100vh;
-  background: var(--darkBlue);
-  color: white;
+  background: transparent;
+  color: var(--darkBlue);
   align-items: center;
   display: flex;
 
@@ -307,12 +307,13 @@ const Landing = styled.div`
       margin-bottom: 56px;
       font-size: 3rem;
       text-align: left;
-      font-weight: 200;
+      font-weight: 300;
+      color: var(--green);
 
       span {
         font-size: 2rem;
-        font-weight: 700;
-        color: var(--blue);
+        font-weight: 900;
+        color: var(--darkBlue);
       }
     }
 
@@ -356,17 +357,17 @@ const Landing = styled.div`
         padding-bottom: 2px;
         background: transparent;
         border: none;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid var(--darkBlue);
         padding: 10px;
-        color: white;
+        color: var(--darkBlue);
         width: 100%;
         ::placeholder {
           opacity: 0.6;
-          color: white;
+          color: var(--darkBlue);
         }
         :focus {
           outline: none;
-          border: 1px solid white;
+          border: 1px solid var(--darkBlue);
         }
       }
 
@@ -386,16 +387,16 @@ const Landing = styled.div`
     align-items: flex-end;
 
     button {
-      border: 1px solid var(--blue);
+      border: 1px solid var(--darkBlue);
       background: transparent;
-      color: var(--blue);
+      color: var(--darkBlue);
       border-radius: 12px;
       padding: 1rem 3rem;
       font-size: 1.1rem;
 
       :hover {
-        background: var(--blue);
-        border-color: var(--blue);
+        background: var(--darkBlue);
+        border-color: var(--darkBlue);
         cursor: pointer;
         color: var(--white);
       }

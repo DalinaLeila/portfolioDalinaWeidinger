@@ -9,7 +9,8 @@ const Header = ({ siteTitle }) => {
   navRef.current = navBackground
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 670
+      const show = window.scrollY > 670 && window.scrollY < 1570
+
       if (navRef.current !== show) {
         setNavBackground(show)
       }
@@ -22,12 +23,18 @@ const Header = ({ siteTitle }) => {
 
   return (
     <Navbar
+      btnColor={navBackground ? "var(--green)" : "var(--blue)"}
       color={navBackground ? "var(--white)" : "var(--darkBlue)"}
-      backgroundColor={navBackground ? "var(--darkBlue)" : "var(--white)"}
+      backgroundColor={navBackground ? "var(--blue)" : "var(--white)"}
       style={{ transition: "1s ease" }}
     >
       <div className="container">
-        <Link to="/#home">{siteTitle}</Link>
+        <Link className="logo desktop-logo" to="/">
+          Dalina Weidinger
+        </Link>
+        <Link className="phone-logo logo" to="/">
+          DW
+        </Link>
         <div>
           <Link className=" about-link " to="/#projects">
             Projects

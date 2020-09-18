@@ -30,7 +30,7 @@ const AboutSection = styled.div`
   color: var(--white);
   height: 70vh;
   max-width: 960px;
-  margin-top: 60px;
+  padding-top: 100px;
 
   p {
     font-weight: 300;
@@ -38,10 +38,10 @@ const AboutSection = styled.div`
     font-size: 1.1rem;
   }
   .circle {
-    background: var(--darkBlue);
+    background: var(--green);
     color: var(--white);
     border-radius: 25px;
-    border: 2px solid var(--darkBlue);
+    border: 2px solid var(--green);
     font-weight: 600;
     padding: 0.7rem 1.5rem;
     -webkit-text-decoration: none;

@@ -24,13 +24,14 @@ export const Navbar = styled.header`
   min-height: 4.25rem;
   background-color: ${props => props.backgroundColor};
   width: 100%;
-  border-bottom: ${props =>
-    props.border ? "    0.5px solid rgba(255, 255, 255, 0.5)" : ""};
+  border-bottom: ${props => (props.border ? "var(--borderColor)" : "")};
   .container {
     margin: 0 5rem;
 
     width: 100%;
-
+    .phone-logo {
+      display: none;
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,6 +41,13 @@ export const Navbar = styled.header`
     }
     @media (max-width: 768px) {
       margin: 0 2rem;
+
+      .phone-logo {
+        display: flex;
+      }
+      .desktop-logo {
+        display: none;
+      }
 
       .about-link {
         display: none;
@@ -53,9 +61,9 @@ export const Navbar = styled.header`
     }
 
     .circle {
-      color: var(--blue);
+      color: ${props => props.btnColor};
       border-radius: 25px;
-      border: 2px solid var(--blue);
+      border: 2px solid ${props => props.btnColor};
       font-weight: 600;
       padding: 0.7rem 1.5rem;
       text-decoration: none;
@@ -64,33 +72,43 @@ export const Navbar = styled.header`
 `
 
 export const Landing = styled.div`
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--darkBlue);
   flex-direction: column;
-  background: var(--white);
+  /* background: var(--borderColor); */
 
   /*   position: absolute;
   left: 50%;
   right: 50%;
   top: 0; */
 
+  @media (max-width: 768px) {
+    margin: 0 2rem;
+  }
   .title-container {
     position: relative;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
   .title-landing {
     position: absolute;
     top: 0;
     margin: 0;
-    font-size: 15rem;
+    font-size: 12rem;
     color: var(--green);
     opacity: 0.5;
     @media (max-width: 1024px) {
-      font-size: 2rem;
+      font-size: 7rem;
+    }
+    @media (max-width: 425px) {
+      font-size: 5rem;
+    }
+    @media (max-width: 375px) {
+      font-size: 4rem;
     }
   }
 
@@ -99,16 +117,26 @@ export const Landing = styled.div`
     opacity: 0.9;
     margin-bottom: 0;
     margin-top: 4rem;
-    font-size: 15rem;
+    font-size: 12rem;
 
     @media (max-width: 1024px) {
-      font-size: 2rem;
+      font-size: 7rem;
+
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 5rem;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 4rem;
     }
   }
 
   .center {
     position: absolute;
-    top: 75%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -118,7 +146,7 @@ export const Landing = styled.div`
     height: 60px;
     border-radius: 25px;
     background: transparent;
-    border: 4px solid var(--blue);
+    border: 3px solid var(--blue);
     overflow: hidden;
   }
   .down:before {

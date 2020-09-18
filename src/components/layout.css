@@ -21,8 +21,9 @@
   /* --blue: #3eb9c2; */
   --blue: #598392;
   /* --blue: #76b5cc; */
-  --green: #aec3b0;
-  --borderColor: #eff6e0;
+  --green: rgb(174, 195, 176);
+  /* --borderColor: #eff6e0; */
+  --borderColor: rgba(174, 195, 176, 0.3);
   /* --borderColor: rgba(24, 41, 61, 0.1); */
 
   /* --beige: rgb(64, 126, 145); */
@@ -39,11 +40,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* background: rgba(233, 240, 243, 0.5); */
+  /* background: var(--borderColor); */
 }
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Sacramento&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
-
+.logo {
+  font-family: "Sacramento", cursive;
+}
 button :hover {
   cursor: pointer;
 }

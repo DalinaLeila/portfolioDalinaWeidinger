@@ -60,10 +60,9 @@ const langMessage = {
 
 const Banner = styled.div`
   transition: 1s all ease-in;
-  margin: 40px 0;
+  justify-content: center;
   padding: 5px 10px;
   @media (max-width: 1024px) {
-    margin: 24px 0;
     padding: 12px 16px;
   }
   background: var(--green);
@@ -73,9 +72,8 @@ const Banner = styled.div`
   justify-content: space-between;
   @media (min-width: 1024px) {
     height: 48px;
+    /* width: 50%; */
   }
-  width: 50%;
-  margin: 0 auto;
 
   div {
     display: flex;

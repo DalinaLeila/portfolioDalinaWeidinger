@@ -80,7 +80,13 @@ const Contact = ({ data }) => {
           </div>
         </Navbar>
         <Landing>
-          <ContentWrapper>
+          <ContentWrapper
+            style={{
+              marginTop: "100px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             {message ? (
               success ? (
                 <Message

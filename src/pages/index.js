@@ -38,7 +38,7 @@ const IndexPage = () => {
   const sizeAnimP = useTransform(
     scrollYProgress,
     [0, 0.1, 0.2],
-    ["1.3rem", "1.7rem", "1.9rem"]
+    ["1.7rem", "1.9rem", "2.1rem"]
   )
   const yPosAnimLastName = useTransform(scrollYProgress, [0, 0.1], [0, -250])
 
@@ -113,6 +113,7 @@ const IndexPage = () => {
                 </motion.h1>
               </div>
               <motion.p
+                className="logo"
                 rotateX={rotateX}
                 rotateY={rotateY}
                 style={{

@@ -5,7 +5,7 @@ import { ContentWrapper } from "../styles/Wrapper"
 import { motion } from "framer-motion"
 import back from "../images/back.svg"
 import { Container, Navbar } from "../styles/MainStyles"
-
+import Message from "../components/templates/Message"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -47,7 +47,13 @@ const Contact = ({ data }) => {
     })
       .then(() => {
         setsuccess(true)
+        // setMessage(true)
         setMessage(true)
+
+        setTimeout(() => {
+          setMessage(false)
+        }, 5000)
+
         setEmptyField("")
         setForm({ name: "", email: "", message: "" })
       })
@@ -66,7 +72,7 @@ const Contact = ({ data }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <Navbar border backgroundColor="var(--green)" color="var(--white)">
+        <Navbar border backgroundColor="var(--darkBlue)" color="var(--white)">
           <div className="container">
             <Link to="/">
               <img height="30px" src={back} alt="" />
@@ -75,15 +81,19 @@ const Contact = ({ data }) => {
         </Navbar>
         <Landing>
           <ContentWrapper>
-            {/*    {message ? (
-          success ? (
-            <Message message={message} setMessage={setMessage} successMessage />
-          ) : (
-            <Message message={message} setMessage={setMessage} />
-          )
-        ) : (
-          ""
-        )} */}
+            {message ? (
+              success ? (
+                <Message
+                  message={message}
+                  setMessage={setMessage}
+                  successMessage
+                />
+              ) : (
+                <Message message={message} setMessage={setMessage} />
+              )
+            ) : (
+              ""
+            )}
           </ContentWrapper>
 
           <ContentWrapper>
@@ -377,7 +387,7 @@ const Landing = styled.div`
       }
 
       .missing {
-        border-bottom: 1px solid var(--alert) !important;
+        border-bottom: 1px solid var(--green) !important;
       }
     }
   }
@@ -394,6 +404,9 @@ const Landing = styled.div`
       padding: 1rem 3rem;
       font-size: 1.1rem;
 
+      :focus {
+        outline: none;
+      }
       :hover {
         background: var(--darkBlue);
         border-color: var(--darkBlue);

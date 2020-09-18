@@ -10,7 +10,9 @@ const footer = () => {
       <ContactBanner>
         <div>
           <h1> Interested in working together? </h1>
-          <p>Let's have a chat.</p>
+          <p className="logo" style={{ fontSize: "2rem" }}>
+            Let's have a chat.
+          </p>
           <Link to="/contact">Contact me</Link>
         </div>
       </ContactBanner>
@@ -33,10 +35,10 @@ const footer = () => {
         {/*   <div className="icon"></div>
         <div className="icon"></div> */}
       </div>{" "}
-      <p className="logo">
-        {/* © {new Date().getFullYear()} */}
+      <p style={{ marginBottom: "0" }} className="logo">
         Dalina Weidinger
       </p>
+      <p style={{ margin: "0" }}>© {new Date().getFullYear()}</p>
     </Footer>
   )
 }
@@ -86,7 +88,7 @@ const ContactBanner = styled.div`
     width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     a {
       border-radius: 25px;
@@ -112,15 +114,17 @@ const ContactBanner = styled.div`
   margin-bottom: 10rem;
   margin: -6rem 20rem;
 
-  @media (min-width: 1024px) and (max-width: 1440px) {
-  }
   @media (max-width: 1440px) {
     margin: 0 5rem;
     margin-top: -6rem;
+    padding: 1rem 0;
     div {
       display: flex;
 
       flex-direction: column;
+    }
+    .logo {
+      margin: 10px 0;
     }
     h1 {
       font-size: 1.6rem;

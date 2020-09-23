@@ -88,7 +88,7 @@ const Banner = styled.div`
   }
   h5 {
     color: ${props =>
-      props.successMessage ? "var(--darkBlue)" : "var(--alert)"};
+    props.successMessage ? "var(--darkBlue)" : "var(--alert)"};
     margin-right: 16px;
   }
 

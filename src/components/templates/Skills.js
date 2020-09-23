@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import code from "../../images/code.svg"
 import student from "../../images/student.svg"
+import certificate from "../../images/certificate.svg"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 const Skills = () => {
   const { scrollY, scrollYProgress } = useViewportScroll()
@@ -18,11 +19,11 @@ const Skills = () => {
           />
           <h1>UCL Graduate</h1>
           <p>
-            I completed a Bachelor of Science in Psychology focusing mainly on
-            the interaction between technology and psychology
+            I graduated with first class honours from UCL studying BSc
+            Psychology
           </p>
 
-          <p className="sub-title">Modules Included:</p>
+          <p className="sub-title">Relevant modules I took:</p>
           <ul>
             <li>Human Computer Interaction</li>
             <li>Computing & Statistics</li>
@@ -36,27 +37,25 @@ const Skills = () => {
         <motion.div style={{ scale }} className="box">
           <img
             className="icon"
-            src={code}
+            src={certificate}
             alt="https://www.flaticon.com/authors/icongeek26"
           />
           <h1>Coding School</h1>
           <p>
-            I value simple content structure, clean design patterns, and
-            thoughtful interactions.
+            I learned the MERN stack focusing on test-driven development and
+            clean code principles.
           </p>
 
-          <p className="sub-title">Languages I know:</p>
-          <ul>
-            <li>Javascript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React/Redux/JSX</li>
-            <li>GatsbyJs</li>
-            <li>NextJs</li>
-            <li>MongoDB</li>
-            <li>Express</li>
-            <li>Node</li>
+          <p className=" sub-title">Additional skills I learned:</p>
+          <ul className="">
+            <li>Team work</li>
+            <li>Clean code principles</li>
+            <li>Design patterns</li>
+            <li>Test-driven development (TDD)</li>
+            <li>Time management</li>
+            <li>Daily standups</li>
             <li>git/GitHub</li>
+            <li>VS Code</li>
           </ul>
         </motion.div>
 
@@ -68,8 +67,8 @@ const Skills = () => {
           />
           <h1>Full-stack Developer</h1>
           <p>
-            I value simple content structure, clean design patterns, and
-            thoughtful interactions.
+            I am now working as a Freelance developer utilizing but not limited
+            to the MERN stack
           </p>
 
           <p className="sub-title">Languages I know:</p>
@@ -80,10 +79,10 @@ const Skills = () => {
             <li>React/Redux/JSX</li>
             <li>GatsbyJs</li>
             <li>NextJs</li>
+            <li>GraphQl</li>
             <li>MongoDB</li>
             <li>Express</li>
             <li>Node</li>
-            <li>git/GitHub</li>
           </ul>
         </motion.div>
       </SkillsStyles>
@@ -101,16 +100,15 @@ const SkillsStyles = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   color: var(--darkBlue);
-  margin-top: -19rem;
+  margin-top: -23rem;
 
-  height: 80vh;
   margin-bottom: 120px;
-  /* background: var(--blue); */
+  /* background: var(--green); */
 
   @media (min-width: 1024px) and (max-width: 1440px) {
     ul {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      /* grid-template-columns: 1fr 1fr; */
     }
   }
   @media (max-width: 1024px) {
@@ -135,20 +133,26 @@ const SkillsStyles = styled.div`
   @media (max-width: 678px) {
     margin-top: -6rem;
   }
+
   .box {
     padding: 30px 10px 20px;
     border-radius: 12px;
+
     box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5),
       0 0 0 1px var(--borderColor);
-    background-color: white;
+    background-color: var(--white);
     text-align: center;
-    width: 30%;
-    height: 100%;
+    width: 31%;
+    /* height: 30vh; */
     font-weight: 300;
+    /* transition: 1s height ease-in; */
+    /* height: 80vh; */
 
+    /*   :hover {
+    } */
     .icon {
       width: 60px;
-      margin: 20px 0;
+      margin: 10px 0;
     }
 
     h1 {
@@ -158,7 +162,8 @@ const SkillsStyles = styled.div`
     .sub-title {
       margin-top: 50px;
       color: var(--blue);
-      font-weight: 500;
+      text-decoration: underline;
+      font-weight: 800;
     }
   }
 

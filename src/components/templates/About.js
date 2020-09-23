@@ -4,19 +4,23 @@ import styled from "styled-components"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 const About = () => {
   const { scrollY, scrollYProgress } = useViewportScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.9], [0, 1, 0])
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.3, 0.9],
+    [0, 0.9, 1, 0]
+  )
 
   return (
     <Container flex alignCenter column bg={"var(--blue)"} id="about">
       <motion.div style={{ opacity }}>
         <AboutSection>
-          <h1 className="section-title">Hi, I'm Dalina. Nice to meet you.</h1>
+          <h1 className="section-title">Hello. Nice to meet you.</h1>
           <p>
-            Dynamic and motivated professional with an interdisciplinary
-            interest in computer science and psychology. Skills include hands-on
-            experience of debugging and optimizing code, analytical thinking and
-            teaching full stack technologies. Experienced in applying customer
-            concepts to IT to improve user experience for clients and employees.
+            I have an interdisciplinary interest in computer science and
+            psychology. The past months I worked as a web dev instructor, where
+            I gained hands-on experience of debugging and optimizing code and
+            teaching full stack technologies. I am now looking for a new
+            exciting opportunity within the tech industry.
           </p>
           <a className="circle">Download Resume</a>
         </AboutSection>
@@ -34,7 +38,7 @@ const AboutSection = styled.div`
   align-items: center;
   text-align: center;
   color: var(--white);
-  height: 70vh;
+  min-height: 95vh;
   max-width: 960px;
   padding-top: 100px;
 

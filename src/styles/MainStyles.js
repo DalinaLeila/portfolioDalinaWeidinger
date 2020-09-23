@@ -19,13 +19,14 @@ export const Container = styled.div`
 export const Navbar = styled.header`
   display: flex;
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   align-items: center;
   min-height: 4.25rem;
   background-color: ${props => props.backgroundColor};
   width: 100%;
   border-bottom: ${props => (props.border ? "var(--borderColor)" : "")};
   .container {
+    z-index: 20;
     margin: 0 5rem;
 
     width: 100%;
@@ -85,7 +86,7 @@ export const Landing = styled.div`
   align-items: center;
   color: var(--darkBlue);
   flex-direction: column;
-  /* background: var(--borderColor); */
+  background: var(--white);
 
   /*   position: absolute;
   left: 50%;
@@ -100,11 +101,13 @@ export const Landing = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+    z-index: 0;
   }
   .title-landing {
     position: absolute;
     top: 0;
     margin: 0;
+    z-index: 0;
     font-size: 12rem;
     color: var(--green);
     opacity: 0.5;
@@ -120,7 +123,7 @@ export const Landing = styled.div`
   }
 
   .title-landing-two {
-    z-index: 9;
+    z-index: 1;
     opacity: 0.9;
     margin-bottom: 0;
     margin-top: 4rem;

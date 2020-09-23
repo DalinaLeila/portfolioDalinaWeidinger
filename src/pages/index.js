@@ -1,5 +1,6 @@
 import React from "react"
 import Skills from "../components/templates/Skills.js"
+
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
@@ -64,12 +65,7 @@ const IndexPage = () => {
         <SEO title="Home" />
         {/* <ParticlesLanding /> */}
         <Landing>
-          <motion.div
-
-          /*     initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
-            transition={{ duration: 2, ease: "easeIn" }} */
-          >
+          <motion.div>
             <div
               style={{
                 display: "flex",
@@ -133,8 +129,6 @@ const IndexPage = () => {
                 I am a freelance web developer, and I love what I do.
               </motion.p>
             </div>
-            {/* <img width="150px" src={me} alt="" /> */}
-            {/* <img width="200px" src={me} alt="" /> */}
           </motion.div>
           <Link to="/#about">
             <div class="center">

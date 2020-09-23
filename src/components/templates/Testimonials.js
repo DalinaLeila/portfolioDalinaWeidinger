@@ -1,8 +1,18 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 const Testimonials = () => {
   const [ref, setRef] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let randomRef = Math.floor(Math.random() * references.length)
+      setRef(randomRef)
+    }, 10000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <Container>
       <div>
@@ -11,17 +21,11 @@ const Testimonials = () => {
         <div className="flex">
           {/* <button onClick={() => setRef(ref - 1)}>hi</button> */}
           <References>
-            {references.map((el, i) => {
-              if (ref === i) {
-                return (
-                  <div>
-                    <h4>"{el.text}"</h4>
-                    <h3>{el.name}</h3>
-                    <p>{el.role}</p>
-                  </div>
-                )
-              }
-            })}
+            <motion.div>
+              <h4 className="text">"{references[ref].text}"</h4>
+              <h3 className="name">{references[ref].name}</h3>
+              <p>{references[ref].role}</p>
+            </motion.div>
           </References>
           {/* <button onClick={() => setRef(ref + 1)}>hi</button> */}
         </div>
@@ -51,7 +55,7 @@ const Container = styled.section`
   padding-top: 2rem;
   color: var(--darkBlue);
   border-top: 1px solid var(--borderColor);
-  /* background: transparent; */
+  background: var(--white);
 
   @media (min-width: 1024px) {
     padding: 2rem 15rem 10rem;
@@ -66,9 +70,17 @@ const References = styled.div`
   border-radius: 12px;
   padding: 1rem;
   /* box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px var(--borderColor);
- */
+  */
   p {
     color: var(--blue);
+  }
+  .text {
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  .name {
+    font-size: 1.25rem;
   }
 `
 const Dots = styled.div`
@@ -77,8 +89,8 @@ const Dots = styled.div`
   margin: 2rem 0;
   div {
     margin: 0 5px;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 12px;
     border: 1px solid var(--darkBlue);
 

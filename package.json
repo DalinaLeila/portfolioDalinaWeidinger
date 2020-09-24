@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Dalina-Weidinger-Portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Dalina Weidinger Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dalina Weidinger <dalina.weidinger@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "framer": "^1.2.6",

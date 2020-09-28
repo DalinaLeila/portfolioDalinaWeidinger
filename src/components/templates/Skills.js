@@ -20,7 +20,7 @@ const Skills = () => {
           <h1>UCL Graduate</h1>
           <p className="description">
             I graduated with first class honours from UCL studying BSc
-            Psychology
+            Psychology.
           </p>
 
           <p className="sub-title">Relevant modules I took:</p>
@@ -42,8 +42,7 @@ const Skills = () => {
           />
           <h1>Coding School</h1>
           <p className="description">
-            Following my interest in tech, I completed the full-stack web
-            development bootcamp @ Ironhack.
+            I completed the full-stack web development bootcamp @ Ironhack.
           </p>
 
           <p className=" sub-title">Skills I learned:</p>
@@ -68,7 +67,7 @@ const Skills = () => {
           <h1>Full-stack Developer</h1>
           <p className="description">
             I am now working as a Freelance developer utilizing but not limited
-            to the MERN stack
+            to the MERN stack.
           </p>
 
           <p className="sub-title">Languages I know:</p>
@@ -77,8 +76,8 @@ const Skills = () => {
             <li>HTML</li>
             <li>CSS</li>
             <li>React/Redux/JSX</li>
-            <li>GatsbyJs</li>
-            <li>NextJs</li>
+            <li>Gatsby</li>
+            <li>Next</li>
             <li>GraphQL</li>
             <li>MongoDB</li>
             <li>Express</li>
@@ -100,7 +99,7 @@ const SkillsStyles = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   color: var(--darkBlue);
-  margin-top: -26rem;
+  margin-top: -24rem;
 
   margin-bottom: 120px;
   /* background: var(--green); */
@@ -145,7 +144,8 @@ const SkillsStyles = styled.div`
       0 0 0 1px var(--borderColor);
     background-color: var(--white);
     text-align: center;
-    width: 31%;
+    width: 100%;
+    margin: 1rem;
     /* height: 30vh; */
     font-weight: 300;
     /* transition: 1s height ease-in; */

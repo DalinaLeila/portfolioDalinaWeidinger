@@ -8,7 +8,9 @@ import { Container, Navbar } from "../styles/MainStyles"
 import Message from "../components/templates/Message"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import email from "../images/email.svg"
+import github from "../images/github.svg"
+import linkedin from "../images/linkedin.svg"
 const Contact = ({ data }) => {
   const [form, setForm] = useState({
     name: "",
@@ -115,6 +117,23 @@ const Contact = ({ data }) => {
                 <h1 className="headline">
                   Thanks for taking the time to reach out.
                   <br /> <span className="logo">Let's work together!</span>
+                  <div className="social">
+                    <a
+                      target="_blank"
+                      href="https://linkedin.com/in/dalina-weidinger"
+                    >
+                      <div className="icon">
+                        <img width="20px" height="20px" src={linkedin} alt="" />
+                      </div>{" "}
+                    </a>
+                    <a target="_blank" href="https://github.com/DalinaLeila">
+                      <div className="icon">
+                        <img width="20px" height="20px" src={github} alt="" />
+                      </div>
+                    </a>
+                    {/*   <div className="icon"></div>
+        <div className="icon"></div> */}
+                  </div>{" "}
                 </h1>
                 <div className="contact-info-container">
                   <div className=" body contact-info">
@@ -221,6 +240,33 @@ const Contact = ({ data }) => {
 export default Contact
 
 const Landing = styled.div`
+  .social {
+    display: flex;
+    justify-content: flex-start;
+    height: 80%;
+    margin-top: 10px;
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      background: var(--green);
+      border: 0.5px solid var(--green);
+      transition: 0.2s background ease-in;
+      :hover {
+        transition: 0.2s background ease-in;
+        background: var(--darkBlue);
+        border-color: var(--darkBlue);
+
+        cursor: pointer;
+      }
+    }
+  }
+
   flex-direction: column;
   justify-content: space-evenly;
 
@@ -285,7 +331,7 @@ const Landing = styled.div`
     .main-container {
       flex-direction: column;
       justify-content: center;
-      margin: 0 !important;
+      /* margin: 0 !important; */
 
       .box {
         padding: 0 !important;
@@ -300,7 +346,7 @@ const Landing = styled.div`
   @media (min-width: 1024px) and (max-width: 1439px) {
     /* L */
     .main-container {
-      margin: 0 !important;
+      /* margin: 0 !important; */
 
       .box {
         padding: 0 !important;
@@ -409,6 +455,7 @@ const Landing = styled.div`
       border-radius: 12px;
       padding: 1rem 3rem;
       font-size: 1.1rem;
+      transition: 0.2s background ease-in;
 
       :focus {
         outline: none;
@@ -418,6 +465,7 @@ const Landing = styled.div`
         border-color: var(--darkBlue);
         cursor: pointer;
         color: var(--white);
+        transition: 0.2s background ease-in;
       }
     }
 

@@ -17,11 +17,12 @@ const About = () => {
         <AboutSection>
           <h1 className="section-title">Hello. Nice to meet you.</h1>
           <p>
-            I have an interdisciplinary interest in computer science and
-            psychology. The past months I worked as a web dev instructor, where
-            I gained hands-on experience of debugging and optimizing code and
-            teaching full stack technologies. I am now looking for a new
-            exciting opportunity within the tech industry.
+            I am a web developer from Berlin who is motivated to bring your
+            ideas to life. So far I've built e-commerce platforms, company
+            websites and engaged in my own independent projects. I also have
+            experience in teaching full-stack technologies. I am looking for a
+            new opportunity within the tech industry to use my interdisciplinary
+            interest in computer science and psychology.
           </p>
 
           <a target="_blank" className="circle" href={cv}>

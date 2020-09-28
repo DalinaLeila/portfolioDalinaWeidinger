@@ -63,14 +63,16 @@ const Footer = styled.footer`
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      border: 1px solid white;
+      border: 1px solid var(--darkBlue);
       width: 40px;
       height: 40px;
       margin: 0 10px;
+      background: var(--darkBlue);
       :hover {
         transition: 0.2s background ease-in;
+        background: transparent;
 
-        background: var(--darkBlue);
+        border-color: white;
         cursor: pointer;
       }
     }

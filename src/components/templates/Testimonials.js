@@ -110,8 +110,8 @@ const References = styled.div`
 
   -webkit-overflow-scrolling: touch;
   ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
   }
   ::-webkit-scrollbar-thumb {
     background: var(--green);
@@ -141,19 +141,17 @@ const References = styled.div`
     color: var(--blue);
   }
   .text {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
-  }
-
-  .text {
     position: relative;
-    background: var(--blue);
+    background: transparent;
+    /* border: 0.5px solid var(--green); */
     border-radius: 0.4em;
-    color: var(--white);
+    color: var(--darkBlue);
     padding: 30px;
   }
 
-  .text:after {
+  /*  .text:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -161,12 +159,12 @@ const References = styled.div`
     width: 0;
     height: 0;
     border: 19px solid transparent;
-    border-top-color: var(--blue);
+    border-top-color: var(--green);
     border-bottom: 0;
     border-right: 0;
     margin-left: -9.5px;
     margin-bottom: -19px;
-  }
+  } */
   .name {
     font-size: 1.25rem;
   }

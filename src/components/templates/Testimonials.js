@@ -198,13 +198,13 @@ const references = [
     name: "Ethan Dabush",
     role: "Co-Founder Savorly",
   },
-  /*  {
+  {
     text:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, amet temporibus quasi totam molestiae doloribus veniam sit dolorem fugiat asperiores, dolores sunt ut? Nam nisi, dignissimos facilis corrupti ab reiciendis.",
-    name: "André de Alberquerqe",
+      "Dalina is a hard working, fast learning joy to work with.  Working with her on multiple projects, I know I can count on her to deliver and to go above and beyond on what is asked. She is a great team player and makes sure that the projects are delivered on a timely manner.",
+    name: "André de Albuquerque",
     role: "Co-Worker @Ironhack",
   },
-  {
+  /* {
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, amet temporibus quasi totam molestiae doloribus veniam sit dolorem fugiat asperiores, dolores sunt ut? Nam nisi, dignissimos facilis corrupti ab reiciendis.",
     name: "Anouck Gotlib",

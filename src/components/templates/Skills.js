@@ -50,7 +50,7 @@ const Skills = () => {
           <ul className="">
             <li>Team work</li>
             <li>Clean code principles</li>
-            <li>Design patterns</li>
+            <li>Object oriented design</li>
             <li>Test-driven development (TDD)</li>
             <li>Time management</li>
             <li>Daily standups</li>
@@ -79,7 +79,7 @@ const Skills = () => {
             <li>React/Redux/JSX</li>
             <li>GatsbyJs</li>
             <li>NextJs</li>
-            <li>GraphQl</li>
+            <li>GraphQL</li>
             <li>MongoDB</li>
             <li>Express</li>
             <li>Node</li>

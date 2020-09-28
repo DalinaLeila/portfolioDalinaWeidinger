@@ -17,7 +17,7 @@ import {
 import Footer from "../components/footer"
 import Testimonials from "../components/templates/Testimonials"
 import { Landing } from "../styles/MainStyles"
-import ParticlesLanding from "../components/ParticlesLanding"
+// import ParticlesLanding from "../components/ParticlesLanding"
 /* export const query = graphql`
   query {
     file(relativePath: { eq: "student.svg" }) {

@@ -4,17 +4,10 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import Img from "gatsby-image"
 
-const ProjectBox = ({
-  projectType,
-  slug,
-  title,
-  topic,
-  description,
-  imgSrc,
-  color,
-}) => {
+const ProjectBox = ({ project, imgSrc }) => {
+  const { projectType, slug, title, topic, description, color } = project
   return (
-    <a target="_blank" href={slug}>
+    <a target="_blank" href={slug.current}>
       <ProjectStyled color={color}>
         <div className="alwaysOverlay">
           <Img

@@ -38,7 +38,7 @@ const AboutSection = styled.div`
   align-items: center;
   text-align: center;
   color: var(--white);
-  min-height: 95vh;
+  min-height: 75vh;
   max-width: 960px;
   padding-top: 100px;
 

@@ -37,6 +37,7 @@ const Projects = ({ all }) => {
                 client
                 description
                 projectType
+
                 image {
                   asset {
                     fluid {
@@ -52,7 +53,7 @@ const Projects = ({ all }) => {
           }
         }
       `}
-      render={data => (
+      render={({ allSanityProject }) => (
         <Container bg="var(--white)" id="projects">
           <Grid>
             <motion.div
@@ -61,23 +62,23 @@ const Projects = ({ all }) => {
               initial="hidden"
               animate="show"
             >
-              {data.allSanityProject.edges.map((project, index) => {
-                const p = project.node
-                return (
-                  <motion.div key={index} variants={item}>
-                    <ProjectBox
-                      key={p.id}
-                      slug={p.slug.current}
-                      title={p.title}
-                      topic={p.type}
-                      projectType={p.projectType}
-                      description={p.description}
-                      imgSrc={p?.image?.asset?.fluid}
-                      color={p.color}
-                    />
-                  </motion.div>
-                )
-              })}
+              {allSanityProject.edges
+                .sort((a, b) => {
+                  if (a.node.projectNumber < b.node.projectNumber) return -1
+                  else return 1
+                })
+                .map((project, index) => {
+                  const p = project.node
+                  return (
+                    <motion.div key={index} variants={item}>
+                      <ProjectBox
+                        key={p.id}
+                        project={p}
+                        imgSrc={p?.image?.asset?.fluid}
+                      />
+                    </motion.div>
+                  )
+                })}
             </motion.div>
           </Grid>
         </Container>

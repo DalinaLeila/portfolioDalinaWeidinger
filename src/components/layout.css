@@ -1,33 +1,12 @@
 :root {
-  /* --beige: rgb(169, 121, 135); */
-
-  /* --black: #2f343a; */
   --whiteText: white;
   --white: white;
-  /*   --lightGrey: rgba(233, 240, 243, 0.5);
-  --grey: #717d8c;
-  --lightGrey: #dddddd;
-  --beige: #bdb69c;
-  --green: #80ceb9;
-  --blue: #41aac4;
-  --pink: #ff008c;
-  --purple: #d309e1;
-  --darkPurple: #9c1aff;
-  --darkBlue: rgb(24, 41, 61); */
-
   --darkBlue: #021d27;
   --black: #021d27;
   --mediumBlue: #124559;
-  /* --blue: #3eb9c2; */
   --blue: #598392;
-  /* --blue: #76b5cc; */
   --green: rgb(174, 195, 176);
-  /* --borderColor: #eff6e0; */
   --borderColor: rgba(174, 195, 176, 0.3);
-  /* --borderColor: rgba(24, 41, 61, 0.1); */
-
-  /* --beige: rgb(64, 126, 145); */
-  /* --grey: #d9d9d9; */
 }
 
 html {
@@ -74,6 +53,10 @@ button :focus {
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .spaceBtw {

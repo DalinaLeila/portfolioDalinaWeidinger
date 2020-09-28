@@ -62,7 +62,7 @@ const ParticlesLanding = () => {
 export default ParticlesLanding
 
 const Particles = styled.div`
-  height: 82vh;
+  height: 100vh;
   width: 100vw;
   position: relative;
   @keyframes particle-animation-1 {
@@ -76,7 +76,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.34;
     animation-delay: -0.4s;
-    background-color: #d9268b;
+    background-color: var(--green);
     transform: translate3d(81vw, 36vh, 18px);
   }
   @keyframes particle-animation-2 {
@@ -90,7 +90,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.22;
     animation-delay: -0.8s;
-    background-color: #77d926;
+    background-color: var(--blue);
     transform: translate3d(9vw, 79vh, 4px);
   }
   @keyframes particle-animation-3 {
@@ -104,7 +104,7 @@ const Particles = styled.div`
     width: 8px;
     opacity: 0.46;
     animation-delay: -1.2s;
-    background-color: #26cdd9;
+    background-color: var(--darkBlue);
     transform: translate3d(39vw, 65vh, 28px);
   }
   @keyframes particle-animation-4 {
@@ -118,7 +118,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.43;
     animation-delay: -1.6s;
-    background-color: #26d99a;
+    background-color: var(--green);
     transform: translate3d(71vw, 73vh, 49px);
   }
   @keyframes particle-animation-5 {
@@ -132,7 +132,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.4;
     animation-delay: -2s;
-    background-color: #59d926;
+    background-color: var(--darkBlue)
     transform: translate3d(14vw, 6vh, 45px);
   }
   @keyframes particle-animation-6 {
@@ -146,7 +146,7 @@ const Particles = styled.div`
     width: 8px;
     opacity: 0.49;
     animation-delay: -2.4s;
-    background-color: #62d926;
+    background-color: var(--darkBlue)
     transform: translate3d(25vw, 55vh, 16px);
   }
   @keyframes particle-animation-7 {
@@ -160,7 +160,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.11;
     animation-delay: -2.8s;
-    background-color: #d9d026;
+    background-color: var(--darkBlue)
     transform: translate3d(81vw, 20vh, 36px);
   }
   @keyframes particle-animation-8 {
@@ -174,7 +174,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.74;
     animation-delay: -3.2s;
-    background-color: #2926d9;
+    background-color: var(--darkBlue)
     transform: translate3d(30vw, 18vh, 30px);
   }
   @keyframes particle-animation-9 {
@@ -188,7 +188,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.16;
     animation-delay: -3.6s;
-    background-color: #d926a9;
+    background-color: var(--darkBlue)
     transform: translate3d(32vw, 67vh, 43px);
   }
   @keyframes particle-animation-10 {
@@ -202,7 +202,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.03;
     animation-delay: -4s;
-    background-color: #2694d9;
+    background-color: var(--green);
     transform: translate3d(78vw, 34vh, 75px);
   }
   @keyframes particle-animation-11 {
@@ -216,7 +216,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.23;
     animation-delay: -4.4s;
-    background-color: #d926bb;
+    background-color: var(--green);
     transform: translate3d(43vw, 64vh, 96px);
   }
   @keyframes particle-animation-12 {
@@ -230,7 +230,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.47;
     animation-delay: -4.8s;
-    background-color: #26d9be;
+    background-color: var(--green);
     transform: translate3d(42vw, 3vh, 38px);
   }
   @keyframes particle-animation-13 {
@@ -244,7 +244,7 @@ const Particles = styled.div`
     width: 8px;
     opacity: 0.86;
     animation-delay: -5.2s;
-    background-color: #d92671;
+    background-color: var(--darkBlue);
     transform: translate3d(44vw, 51vh, 57px);
   }
   @keyframes particle-animation-14 {
@@ -258,7 +258,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.11;
     animation-delay: -5.6s;
-    background-color: #d9266b;
+    background-color: var(--darkBlue);
     transform: translate3d(16vw, 40vh, 20px);
   }
   @keyframes particle-animation-15 {
@@ -272,7 +272,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.38;
     animation-delay: -6s;
-    background-color: #267dd9;
+    background-color: var(--darkBlue);
     transform: translate3d(10vw, 66vh, 75px);
   }
   @keyframes particle-animation-16 {
@@ -286,7 +286,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.02;
     animation-delay: -6.4s;
-    background-color: #2926d9;
+    background-color: var(--darkBlue);
     transform: translate3d(3vw, 63vh, 14px);
   }
   @keyframes particle-animation-17 {
@@ -300,7 +300,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.95;
     animation-delay: -6.8s;
-    background-color: #2629d9;
+    background-color: var(--darkBlue);
     transform: translate3d(23vw, 75vh, 44px);
   }
   @keyframes particle-animation-18 {
@@ -314,7 +314,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.85;
     animation-delay: -7.2s;
-    background-color: #d92659;
+    background-color: var(--darkBlue);
     transform: translate3d(58vw, 31vh, 52px);
   }
   @keyframes particle-animation-19 {
@@ -328,7 +328,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.06;
     animation-delay: -7.6s;
-    background-color: #2638d9;
+    background-color: var(--darkBlue);
     transform: translate3d(4vw, 90vh, 68px);
   }
   @keyframes particle-animation-20 {
@@ -342,7 +342,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.55;
     animation-delay: -8s;
-    background-color: #d92635;
+    background-color: var(--darkBlue);
     transform: translate3d(38vw, 72vh, 68px);
   }
   @keyframes particle-animation-21 {
@@ -356,7 +356,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.7;
     animation-delay: -8.4s;
-    background-color: #4126d9;
+    background-color: var(--darkBlue);
     transform: translate3d(21vw, 48vh, 51px);
   }
   @keyframes particle-animation-22 {
@@ -370,7 +370,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.47;
     animation-delay: -8.8s;
-    background-color: #26d9a0;
+    background-color: var(--darkBlue);
     transform: translate3d(2vw, 74vh, 58px);
   }
   @keyframes particle-animation-23 {
@@ -384,7 +384,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.93;
     animation-delay: -9.2s;
-    background-color: #7dd926;
+    background-color: var(--darkBlue);
     transform: translate3d(27vw, 49vh, 81px);
   }
   @keyframes particle-animation-24 {
@@ -398,7 +398,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.13;
     animation-delay: -9.6s;
-    background-color: #a926d9;
+    background-color: var(--green);
     transform: translate3d(80vw, 37vh, 61px);
   }
   @keyframes particle-animation-25 {
@@ -412,7 +412,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.98;
     animation-delay: -10s;
-    background-color: #268ed9;
+    background-color: var(--green);
     transform: translate3d(41vw, 84vh, 98px);
   }
   @keyframes particle-animation-26 {
@@ -426,7 +426,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.36;
     animation-delay: -10.4s;
-    background-color: #80d926;
+    background-color: var(--green);
     transform: translate3d(80vw, 27vh, 76px);
   }
   @keyframes particle-animation-27 {
@@ -440,7 +440,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.7;
     animation-delay: -10.8s;
-    background-color: #d9d626;
+    background-color: var(--green);
     transform: translate3d(40vw, 77vh, 34px);
   }
   @keyframes particle-animation-28 {
@@ -454,7 +454,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.61;
     animation-delay: -11.2s;
-    background-color: #d95c26;
+    background-color: var(--green);
     transform: translate3d(51vw, 65vh, 74px);
   }
   @keyframes particle-animation-29 {
@@ -468,7 +468,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.24;
     animation-delay: -11.6s;
-    background-color: #7dd926;
+    background-color: var(--green);
     transform: translate3d(43vw, 13vh, 70px);
   }
   @keyframes particle-animation-30 {
@@ -482,7 +482,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.07;
     animation-delay: -12s;
-    background-color: #d94126;
+    background-color: var(--green);
     transform: translate3d(42vw, 63vh, 23px);
   }
   @keyframes particle-animation-31 {
@@ -496,7 +496,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.51;
     animation-delay: -12.4s;
-    background-color: #cd26d9;
+    background-color: var(--green);
     transform: translate3d(33vw, 56vh, 54px);
   }
   @keyframes particle-animation-32 {
@@ -510,7 +510,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.32;
     animation-delay: -12.8s;
-    background-color: #77d926;
+    background-color: var(--green);
     transform: translate3d(15vw, 22vh, 22px);
   }
   @keyframes particle-animation-33 {
@@ -524,7 +524,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.73;
     animation-delay: -13.2s;
-    background-color: #3526d9;
+    background-color: var(--green);
     transform: translate3d(31vw, 89vh, 1px);
   }
   @keyframes particle-animation-34 {
@@ -538,7 +538,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.93;
     animation-delay: -13.6s;
-    background-color: #44d926;
+    background-color: var(--green);
     transform: translate3d(82vw, 51vh, 95px);
   }
   @keyframes particle-animation-35 {
@@ -552,7 +552,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.83;
     animation-delay: -14s;
-    background-color: #26d9a3;
+    background-color: var(--green);
     transform: translate3d(83vw, 57vh, 53px);
   }
   @keyframes particle-animation-36 {
@@ -566,7 +566,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.92;
     animation-delay: -14.4s;
-    background-color: #d97a26;
+    background-color: var(--green);
     transform: translate3d(25vw, 84vh, 27px);
   }
   @keyframes particle-animation-37 {
@@ -580,7 +580,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.97;
     animation-delay: -14.8s;
-    background-color: #d97726;
+    background-color: var(--green);
     transform: translate3d(58vw, 52vh, 86px);
   }
   @keyframes particle-animation-38 {
@@ -594,7 +594,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.14;
     animation-delay: -15.2s;
-    background-color: #d98026;
+    background-color: var(--green);
     transform: translate3d(88vw, 72vh, 32px);
   }
   @keyframes particle-animation-39 {
@@ -608,7 +608,7 @@ const Particles = styled.div`
     width: 8px;
     opacity: 0.76;
     animation-delay: -15.6s;
-    background-color: #d626d9;
+    background-color: var(--green);
     transform: translate3d(39vw, 73vh, 16px);
   }
   @keyframes particle-animation-40 {
@@ -622,7 +622,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.5;
     animation-delay: -16s;
-    background-color: #2c26d9;
+    background-color: var(--blue);
     transform: translate3d(49vw, 56vh, 4px);
   }
   @keyframes particle-animation-41 {
@@ -636,7 +636,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.96;
     animation-delay: -16.4s;
-    background-color: #26d0d9;
+    background-color: var(--blue);
     transform: translate3d(86vw, 52vh, 17px);
   }
   @keyframes particle-animation-42 {
@@ -650,7 +650,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.86;
     animation-delay: -16.8s;
-    background-color: #2632d9;
+    background-color: var(--blue);
     transform: translate3d(50vw, 10vh, 45px);
   }
   @keyframes particle-animation-43 {
@@ -664,7 +664,7 @@ const Particles = styled.div`
     width: 9px;
     opacity: 0.88;
     animation-delay: -17.2s;
-    background-color: #8526d9;
+    background-color: var(--blue);
     transform: translate3d(57vw, 77vh, 26px);
   }
   @keyframes particle-animation-44 {
@@ -678,7 +678,7 @@ const Particles = styled.div`
     width: 8px;
     opacity: 0.56;
     animation-delay: -17.6s;
-    background-color: #26a0d9;
+    background-color: var(--blue);
     transform: translate3d(19vw, 74vh, 12px);
   }
   @keyframes particle-animation-45 {
@@ -692,7 +692,7 @@ const Particles = styled.div`
     width: 8px;
     opacity: 0.37;
     animation-delay: -18s;
-    background-color: #d98526;
+    background-color: var(--blue);
     transform: translate3d(29vw, 78vh, 30px);
   }
   @keyframes particle-animation-46 {
@@ -706,7 +706,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.35;
     animation-delay: -18.4s;
-    background-color: #2644d9;
+    background-color: var(--blue);
     transform: translate3d(4vw, 16vh, 4px);
   }
   @keyframes particle-animation-47 {
@@ -720,7 +720,7 @@ const Particles = styled.div`
     width: 7px;
     opacity: 0.82;
     animation-delay: -18.8s;
-    background-color: #d99726;
+    background-color: var(--green);
     transform: translate3d(9vw, 47vh, 57px);
   }
   @keyframes particle-animation-48 {
@@ -734,7 +734,7 @@ const Particles = styled.div`
     width: 10px;
     opacity: 0.67;
     animation-delay: -19.2s;
-    background-color: #26d968;
+    background-color: var(--green);
     transform: translate3d(54vw, 43vh, 71px);
   }
   @keyframes particle-animation-49 {
@@ -748,7 +748,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.83;
     animation-delay: -19.6s;
-    background-color: #4ad926;
+    background-color: var(--green);
     transform: translate3d(10vw, 69vh, 55px);
   }
   @keyframes particle-animation-50 {
@@ -762,7 +762,7 @@ const Particles = styled.div`
     width: 6px;
     opacity: 0.84;
     animation-delay: -20s;
-    background-color: #26c1d9;
+    background-color: var(--green);
     transform: translate3d(36vw, 89vh, 83px);
   }
   .particle {

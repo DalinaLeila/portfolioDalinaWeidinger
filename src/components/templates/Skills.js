@@ -18,7 +18,7 @@ const Skills = () => {
             alt="https://www.flaticon.com/authors/srip"
           />
           <h1>UCL Graduate</h1>
-          <p>
+          <p className="description">
             I graduated with first class honours from UCL studying BSc
             Psychology
           </p>
@@ -41,12 +41,12 @@ const Skills = () => {
             alt="https://www.flaticon.com/authors/icongeek26"
           />
           <h1>Coding School</h1>
-          <p>
-            I learned the MERN stack focusing on test-driven development and
-            clean code principles.
+          <p className="description">
+            Following my interest in tech, I completed the full-stack web
+            development bootcamp @ Ironhack.
           </p>
 
-          <p className=" sub-title">Additional skills I learned:</p>
+          <p className=" sub-title">Skills I learned:</p>
           <ul className="">
             <li>Team work</li>
             <li>Clean code principles</li>
@@ -66,7 +66,7 @@ const Skills = () => {
             alt="https://www.flaticon.com/authors/icongeek26"
           />
           <h1>Full-stack Developer</h1>
-          <p>
+          <p className="description">
             I am now working as a Freelance developer utilizing but not limited
             to the MERN stack
           </p>
@@ -100,11 +100,14 @@ const SkillsStyles = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   color: var(--darkBlue);
-  margin-top: -23rem;
+  margin-top: -26rem;
 
   margin-bottom: 120px;
   /* background: var(--green); */
 
+  .description {
+    padding: 0 10px;
+  }
   @media (min-width: 1024px) and (max-width: 1440px) {
     ul {
       display: grid;

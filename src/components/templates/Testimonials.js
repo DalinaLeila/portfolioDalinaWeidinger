@@ -198,7 +198,7 @@ const references = [
     name: "Ethan Dabush",
     role: "Co-Founder Savorly",
   },
-  {
+  /*  {
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, amet temporibus quasi totam molestiae doloribus veniam sit dolorem fugiat asperiores, dolores sunt ut? Nam nisi, dignissimos facilis corrupti ab reiciendis.",
     name: "André de Alberquerqe",
@@ -209,5 +209,5 @@ const references = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, amet temporibus quasi totam molestiae doloribus veniam sit dolorem fugiat asperiores, dolores sunt ut? Nam nisi, dignissimos facilis corrupti ab reiciendis.",
     name: "Anouck Gotlib",
     role: "Co-Founder BelgianBoys",
-  },
+  }, */
 ]

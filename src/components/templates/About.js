@@ -2,6 +2,7 @@ import React from "react"
 import { Container } from "../../styles/MainStyles"
 import styled from "styled-components"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
+import cv from "../../images/Dalina_Weidinger_CV.pdf"
 const About = () => {
   const { scrollY, scrollYProgress } = useViewportScroll()
   const opacity = useTransform(
@@ -22,7 +23,10 @@ const About = () => {
             teaching full stack technologies. I am now looking for a new
             exciting opportunity within the tech industry.
           </p>
-          <a className="circle">Download Resume</a>
+
+          <a target="_blank" className="circle" href={cv}>
+            Open Resume
+          </a>
         </AboutSection>
       </motion.div>
     </Container>

@@ -76,9 +76,15 @@ const Contact = ({ data }) => {
       >
         <Navbar border backgroundColor="var(--darkBlue)" color="var(--white)">
           <div className="container">
-            <Link to="/">
-              <img height="30px" src={back} alt="" />
+            <Link className="logo desktop-logo" to="/">
+              Dalina <span>Weidinger</span>
             </Link>
+            <h1 className="back">
+              <Link className="tooltip" to={`/`}>
+                {"← "}
+                <span className="tooltiptext">Back home</span>
+              </Link>
+            </h1>
           </div>
         </Navbar>
         <Landing>
@@ -104,7 +110,7 @@ const Contact = ({ data }) => {
             )}
           </ContentWrapper>
 
-          <ContentWrapper>
+          <ContentWrapper className="flex align-center">
             <div className="main-container">
               <div
                 className="box"
@@ -154,84 +160,85 @@ const Contact = ({ data }) => {
                   </div>
                 </div>
               </div>
-              <div
-                className="box"
-                data-sal="fade"
-                data-sal-duration="1000"
-                data-sal-delay="500"
-                data-sal-easing="ease"
-                className="box"
+            </div>
+            <Box
+              className="box"
+              data-sal="fade"
+              data-sal-duration="1000"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+              className="box"
+            >
+              <form
+                name="contact"
+                method="post"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                className="form"
+                action="/"
+                onSubmit={handleSubmit}
               >
-                <form
-                  name="contact"
-                  method="post"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  className="form"
-                  action="/"
-                  onSubmit={handleSubmit}
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                  <label>
+                    Don’t fill this out:{" "}
+                    <input name="bot-field" onChange={handleChange} />
+                  </label>
+                </p>
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
                 >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p hidden>
-                    <label>
-                      Don’t fill this out:{" "}
-                      <input name="bot-field" onChange={handleChange} />
-                    </label>
-                  </p>
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <div className="input-container">
-                      <label className="input-header">Name*</label>
-                      <input
-                        // placeholder="John Doe"
-                        className={`form-input body ${emptyField} `}
-                        type="text"
-                        name="name"
-                        value={form.name}
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <div className="input-container">
-                      <label className="input-header">Email*</label>
-                      <input
-                        // placeholder="johndoe@email.com"
-                        className={`form-input body ${emptyField} `}
-                        type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
                   <div className="input-container">
-                    <label className="input-header">Message*</label>
-                    <textarea
-                      name="message"
-                      value={form.message}
-                      onChange={handleChange}
-                      placeholder=""
+                    <label className="input-header">Name*</label>
+                    <input
+                      // placeholder="John Doe"
                       className={`form-input body ${emptyField} `}
-                      emptyField={emptyField}
                       type="text"
-                      rows="10"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
                     />
                   </div>
-                  <div className="flex-col button-container">
-                    <button type="submit" white type="submit">
-                      Send Message
-                    </button>
-                    <p className="captions">*required fields</p>
+                </div>
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <div className="input-container">
+                    <label className="input-header">Email*</label>
+                    <input
+                      // placeholder="johndoe@email.com"
+                      className={`form-input body ${emptyField} `}
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                    />
                   </div>
-                </form>
-              </div>
-            </div>
+                </div>
+                <div className="input-container">
+                  <label className="input-header">Message*</label>
+                  <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder=""
+                    className={`form-input body ${emptyField} `}
+                    emptyField={emptyField}
+                    type="text"
+                    rows="10"
+                  />
+                </div>
+                <div className="flex-col button-container">
+                  <button type="submit" white type="submit">
+                    Send Message
+                  </button>
+                  <p className="captions">*required fields</p>
+                </div>
+              </form>
+            </Box>
           </ContentWrapper>
         </Landing>
+        <div style={{ height: "35vh", background: "var(--white)" }}></div>
       </motion.div>
     </div>
   )
@@ -240,6 +247,9 @@ const Contact = ({ data }) => {
 export default Contact
 
 const Landing = styled.div`
+  background: var(--darkBlue);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.18);
+
   .social {
     display: flex;
     justify-content: flex-start;
@@ -255,12 +265,12 @@ const Landing = styled.div`
       height: 40px;
       margin: 0 10px;
       background: var(--green);
-      border: 0.5px solid var(--green);
+      border: 0.5px solid var(--white);
       transition: 0.2s background ease-in;
       :hover {
         transition: 0.2s background ease-in;
         background: var(--darkBlue);
-        border-color: var(--darkBlue);
+        border-color: var(--white);
 
         cursor: pointer;
       }
@@ -268,7 +278,7 @@ const Landing = styled.div`
   }
 
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   @media (max-width: 600px) {
     /* S */
@@ -353,8 +363,8 @@ const Landing = styled.div`
       }
     }
   }
-  min-height: 100vh;
-  background: transparent;
+  min-height: 70vh;
+  /* background: transparent; */
   color: var(--darkBlue);
   align-items: center;
   display: flex;
@@ -370,12 +380,12 @@ const Landing = styled.div`
       font-size: 3rem;
       text-align: left;
       font-weight: 300;
-      color: var(--green);
+      color: var(--white);
 
       span {
         font-size: 2rem;
         font-weight: 900;
-        color: var(--darkBlue);
+        color: var(--white);
       }
     }
 
@@ -416,12 +426,112 @@ const Landing = styled.div`
 
       .form-input {
         height: 30px;
-        padding-bottom: 2px;
+        /* padding-bottom: 2px; */
         background: transparent;
         border: none;
         border-bottom: 1px solid var(--darkBlue);
         padding: 10px;
+
         color: var(--darkBlue);
+        width: 100%;
+        transition: 2s border ease-in;
+
+        ::placeholder {
+          opacity: 0.6;
+          color: var(--darkBlue);
+        }
+        :focus {
+          outline: none;
+          border: 1px solid var(--darkBlue);
+          transition: 2s border ease-in;
+        }
+      }
+
+      textarea {
+        height: auto !important;
+        /* border: 1px solid var(--white) !important; */
+      }
+
+      .missing {
+        border-bottom: 1px solid var(--green) !important;
+      }
+    }
+  }
+
+  .button-container {
+    display: flex;
+    align-items: flex-end;
+
+    button {
+      /* border-radius: 25px; */
+      border: 2px solid var(--darkBlue);
+      font-weight: 600;
+      /* padding: 0.7rem 1.5rem; */
+      border: 1px solid var(--darkBlue);
+      background: transparent;
+      color: var(--darkBlue);
+      font-size: 1.1rem;
+      transition: 0.2s background ease-in;
+
+      :focus {
+        outline: none;
+      }
+      :hover {
+        background: var(--darkBlue);
+        border-color: var(--darkBlue);
+        cursor: pointer;
+        color: var(--white);
+        transition: 0.2s background ease-in;
+      }
+    }
+
+    p {
+      opacity: 0.6;
+    }
+  }
+`
+
+const Box = styled.div`
+  width: 45vw;
+  margin: 0 80px;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.18);
+
+  /* border: 1px solid var(--darkBlue); */
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: -15rem;
+  .contact-info {
+    align-items: center;
+    display: flex;
+    margin-bottom: 4px;
+    img {
+      height: 100%;
+      padding-right: 16px;
+    }
+  }
+
+  .form {
+    .input-container {
+      width: 100%;
+      margin-bottom: 24px;
+
+      .input-header {
+        margin-bottom: 4px;
+        font-size: 1rem;
+      }
+
+      .form-input {
+        height: 30px;
+
+        /* padding-bottom: 2px; */
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--darkBlue);
+        padding: 10px 0;
+        color: var(--darkBlue);
+        transition: 2s all ease-in;
+
         width: 100%;
         ::placeholder {
           opacity: 0.6;
@@ -429,6 +539,7 @@ const Landing = styled.div`
         }
         :focus {
           outline: none;
+          transition: 2s all ease-in;
           border: 1px solid var(--darkBlue);
         }
       }
@@ -449,11 +560,13 @@ const Landing = styled.div`
     align-items: flex-end;
 
     button {
-      border: 1px solid var(--darkBlue);
-      background: transparent;
-      color: var(--darkBlue);
-      border-radius: 12px;
-      padding: 1rem 3rem;
+      border-radius: 25px;
+      border: 2px solid var(--darkBlue);
+      font-weight: 600;
+      padding: 0.7rem 1.5rem;
+
+      color: var(--white);
+      background: var(--darkBlue);
       font-size: 1.1rem;
       transition: 0.2s background ease-in;
 
@@ -461,10 +574,8 @@ const Landing = styled.div`
         outline: none;
       }
       :hover {
-        background: var(--darkBlue);
-        border-color: var(--darkBlue);
         cursor: pointer;
-        color: var(--white);
+
         transition: 0.2s background ease-in;
       }
     }

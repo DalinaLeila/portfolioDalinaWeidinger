@@ -10,7 +10,7 @@ const ProjectLanding = () => (
       <div className="header">
         <span>
           <h1 className="section-title">My Recent Work</h1>
-          <p>Here are a few projects I've worked on recently.</p>
+          <p>Here are a few web applications I've worked on recently.</p>
         </span>
       </div>
 

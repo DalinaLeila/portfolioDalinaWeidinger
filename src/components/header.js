@@ -2,9 +2,11 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useRef, useEffect } from "react"
 import { Navbar } from "../styles/MainStyles"
+import cv from "../images/Dalina_Weidinger_CV.pdf"
 
 const Header = ({ siteTitle }) => {
   const [navBackground, setNavBackground] = useState(false)
+  const [shadow, setShadow] = useState(false)
   const navRef = useRef()
   navRef.current = navBackground
   useEffect(() => {
@@ -23,6 +25,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <Navbar
+      shadow={shadow}
       btnColor={navBackground ? "var(--green)" : "var(--blue)"}
       color={navBackground ? "var(--white)" : "var(--darkBlue)"}
       backgroundColor={navBackground ? "var(--blue)" : "var(--white)"}
@@ -36,11 +39,18 @@ const Header = ({ siteTitle }) => {
           DW
         </Link>
         <div>
+          <Link className=" about-link " to="/#about">
+            About
+          </Link>
+          <a className=" about-link" target="_blank" href={cv}>
+            Resume
+          </a>
+
           <Link className=" about-link " to="/#projects">
             Projects
           </Link>
           <Link className="circle" to="/contact" bg="var(--beige)">
-            Get In Touch
+            Contact
           </Link>
         </div>
       </div>

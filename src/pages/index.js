@@ -126,7 +126,8 @@ const IndexPage = () => {
                 }}
                 exit={{ opacity: 0 }}
               >
-                I am a freelance web developer, and I love what I do.
+                I am a B.S.c Psychology graduate, web developer, and I love what
+                I do.
               </motion.p>
             </div>
           </motion.div>

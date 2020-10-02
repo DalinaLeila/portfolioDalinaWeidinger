@@ -5,6 +5,14 @@ import styled from "styled-components"
 import ProjectBox from "./ProjectBox"
 import { graphql, StaticQuery } from "gatsby"
 import { motion } from "framer-motion"
+const projectNext = {
+  projectType: "...",
+  slug: { current: "/contact" },
+  title: "Next idea?",
+  topic: "",
+  description: "",
+  color: "var(--borderColor)",
+}
 
 const Projects = ({ all }) => {
   const container = {
@@ -75,10 +83,19 @@ const Projects = ({ all }) => {
                         key={p.id}
                         project={p}
                         imgSrc={p?.image?.asset?.fluid}
+                        type="project"
                       />
                     </motion.div>
                   )
                 })}
+              <motion.div variants={item}>
+                <ProjectBox
+                  key="unique"
+                  type="unique"
+                  project={projectNext}
+                  // imgSrc={p?.image?.asset?.fluid}
+                />
+              </motion.div>
             </motion.div>
           </Grid>
         </Container>

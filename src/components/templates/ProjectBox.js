@@ -1,14 +1,17 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import Img from "gatsby-image"
 
-const ProjectBox = ({ project, imgSrc }) => {
+const ProjectBox = ({ project, imgSrc, type }) => {
   const { projectType, slug, title, topic, description, color } = project
+
+  const unique = type === "unique"
   return (
-    <a target="_blank" href={slug.current}>
-      <ProjectStyled color={color}>
+    <Link to={unique ? "/contact" : `projects/${slug.current}`}>
+      {/* <a target="_blank" href={slug.current}> */}
+      <ProjectStyled type={type} color={color}>
         <div className="alwaysOverlay">
           <Img
             style={{ opacity: "0.2", width: "100%", height: "100%" }}
@@ -26,18 +29,22 @@ const ProjectBox = ({ project, imgSrc }) => {
           </div>
           <div className="sectionText">{topic}</div>
         </div>
-        <div className="content">
-          <p>{description}</p>
-          <button>Visit Site</button>
-        </div>
       </ProjectStyled>
-    </a>
+
+      {/* </a> */}
+    </Link>
   )
 }
 
 export default ProjectBox
 
 const ProjectStyled = styled.div`
+  transition: 0.3s all ease;
+  :hover {
+    transform: scale3d(1.1, 1.1, 1);
+    background-position: 100% 50%;
+    bottom: 2px;
+  }
   cursor: pointer;
   /* padding-bottom: 83%; */
   width: 100%;
@@ -126,7 +133,8 @@ const ProjectStyled = styled.div`
       height: 100%;
       transition: all 0.3s ease-in-out;
       width: 100%;
-      background: var(--darkBlue);
+      background: ${props =>
+        props.type === "unique" ? "var(--green)" : "var(--darkBlue)"};
       opacity: 1;
     }
   }

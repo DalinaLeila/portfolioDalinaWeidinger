@@ -22,6 +22,9 @@ export const Navbar = styled.header`
   z-index: 20;
   align-items: center;
   min-height: 4.25rem;
+  box-shadow: ${props =>
+    props.shadow ? "0px 0px 35px 0px rgba(0, 0, 0, 0.18)" : ""};
+
   background-color: ${props => props.backgroundColor};
   width: 100%;
   border-bottom: ${props => (props.border ? "var(--borderColor)" : "")};
@@ -156,13 +159,13 @@ export const Landing = styled.div`
     height: 60px;
     border-radius: 25px;
     background: transparent;
-    border: 3px solid var(--blue);
+    border: 2px solid var(--blue);
     overflow: hidden;
   }
   .down:before {
     content: "";
     position: absolute;
-    width: 6px;
+    width: 4px;
     height: 6px;
     border-radius: 50%;
     background: var(--blue);
@@ -174,7 +177,7 @@ export const Landing = styled.div`
   .down:after {
     content: "";
     position: absolute;
-    width: 6px;
+    width: 4px;
     height: 15px;
     border-radius: 50%;
     background: var(--blue);

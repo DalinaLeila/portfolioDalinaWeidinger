@@ -35,7 +35,7 @@ const Testimonials = () => {
               // if (ref === index)
               return (
                 <div id={`slide-${i}`}>
-                  <h4 className="text">"{el.text}"</h4>
+                  <h4 className="text logo">"{el.text}"</h4>
                   <h3 className="name">{el.name}</h3>
                   <p>{el.role}</p>
                 </div>

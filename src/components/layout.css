@@ -19,12 +19,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* background: var(--green); */
+  background: var(--white);
 }
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Raleway+Dots&display=swap&family=Sacramento&display=swap&family=Roboto:wght@100&display=swap");
 
 .logo {
-  font-family: "Sacramento", cursive;
+  font-family: "Roboto", sans-serif;
 }
 button :hover {
   cursor: pointer;

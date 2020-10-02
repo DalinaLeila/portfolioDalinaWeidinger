@@ -10,7 +10,7 @@ const footer = () => {
       <ContactBanner>
         <div>
           <h1> Interested in working together? </h1>
-          <p className="logo" style={{ fontSize: "2rem" }}>
+          <p className="logo" style={{ fontSize: "1.8rem" }}>
             Let's have a chat.
           </p>
           <Link to="/contact">Contact me</Link>
@@ -85,6 +85,7 @@ const ContactBanner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.18);
 
   div {
     width: 90%;

@@ -139,9 +139,10 @@ const SkillsStyles = styled.div`
   .box {
     padding: 30px 10px 20px;
     border-radius: 12px;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.18);
 
-    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5),
-      0 0 0 1px var(--borderColor);
+    /* box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 
+      0 0 0 1px var(--borderColor);*/
     background-color: var(--white);
     text-align: center;
     width: 100%;

@@ -46,7 +46,6 @@ const IndexPage = () => {
   const scale = useTransform(scrollYProgress, [1, 0], [0.6, 1])
   const x = useMotionValue(500)
   const y = useMotionValue(500)
-  console.log(x)
 
   const rotateX = useTransform(y, [0, 1000], [10, -10])
   const rotateY = useTransform(x, [0, 2000], [-10, 10])

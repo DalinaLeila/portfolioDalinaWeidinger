@@ -71,7 +71,7 @@ const ProjectTemplate = ({ data }) => {
     <>
       <SEO title="Project" />
       <motion.div
-        exit={{ opacity: 0 }}
+        exit={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -83,8 +83,6 @@ const ProjectTemplate = ({ data }) => {
               <Img
                 style={{
                   boxShadow: "0px 0px 35px 0px rgba(0, 0, 0, 0.18)",
-
-                  // borderRadius: "24px",
                   width: "100%",
                   height: "100%",
                 }}
@@ -127,6 +125,7 @@ const ProjectTemplate = ({ data }) => {
               <div className="title">PROJECT #{project.projectNumber}</div>
               <h1 className="project-title">{project.title}</h1>
               <p className="description">{project.description}</p>
+
               <a
                 className="web-link"
                 href={project.webLink.current}
@@ -135,6 +134,7 @@ const ProjectTemplate = ({ data }) => {
               >
                 Visit Site
               </a>
+
               <div className="header-grid">
                 <div className="client-container">
                   <div className="title">Client</div>
@@ -240,6 +240,11 @@ const Swipe = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
   grid-gap: 1rem;
   height: 100%;
   /* align-content: center; */

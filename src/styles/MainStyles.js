@@ -17,6 +17,42 @@ export const Container = styled.div`
 `
 
 export const Navbar = styled.header`
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  .tooltiptext {
+    font-size: 0.8rem;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+
+    background-color: var(--darkBlue);
+    color: var(--green);
+    text-align: center;
+
+    padding: 5px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .back {
+    border-radius: 50%;
+    background: var(--blue);
+    padding: 0 4px;
+    transition: 0.3s all ease;
+    :hover {
+      transform: scale3d(1.1, 1.1, 1);
+      background-position: 100% 50%;
+      bottom: 2px;
+    }
+  }
   display: flex;
   position: fixed;
   z-index: 20;
